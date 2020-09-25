@@ -30,13 +30,55 @@ Các API đề xuất các bộ lọc có thể trình bày theo (sử dụng ch
 
 3. Danh sách hội thoại
 - uri: 
-  + trường hợp nhiều page: /conversations?facebook_page_id=1,2,3,4&alias=lygt&sort=newest&page=1&number=100
+  + trường hợp nhiều page: /conversations?facebook_page_id=1,2,3,4&alias=lygt&sort=newest&page=1&size=100
   + trường hợp 1 page:
-    /pages/{id}/conversations?alias=lygt&sort=newest&page=1&number=100
-    /conversations?facebook_page_id=1&alias=lygt&sort=newest&page=1&number=100
+    /pages/{id}/conversations?alias=lygt&sort=newest&page=1&size=100
+    /conversations?facebook_page_id=1&alias=lygt&sort=newest&page=1&size=100
  - method: GET
  
  4. Một hội thoại
  - uri: /conversations/{id}
+ 
+ 5. Danh sách người dùng 
+ - uri: 
+      + /customers?alias=lygt&facebook_page_id=1
+      + Khách mapping theo sdt khách bên core: /customers?alias=lygt&phone_number=0378847294
+ - GET
+ 
+ 6. Tìm 1 người dùng 
+ - uri: /customers/{facebook_user_id}?alias=lygt&facebook_page_id=123 (do 1 fbUserId có thể nhắn cho nhiều page nên cần thông tin page, site}  
+ - GET
+ 
+ 7.Tìm danh sách bài đăng
+ - uri :/feeds?facebook_page_id=1,2,3,4&page=1&size=100
+ -GET
+ - response: list bài đăng,page,total_pages...
+ 
+ 8. Tìm một bài đăng
+ - uri: /feeds/{facebook_feed_id}
+ - GET
+ - response: thông tin bài đăng id, title, fb_created_on...
+ 
+ 9. Danh sách tin nhắn của 1 hội thoại
+ - uri: 
+    + /conversations/{conversation_id}/messages
+    + /messages?conversation_id=123
+ - GET
+ - response: list tin nhắn
+ - Note: k cần alias?
+ 
+ 10. Tìm 1 tin nhắn
+ -uri: /messages/{message_id}
+ GET
+ 
+ 11. Danh sách bình luận
+ - uri: 
+    + /conversations/{conversation_id}/comments
+    + /comments?conversation_id=123
+ - GET
+ 
+ 12. Tìm 1 bình luận
+ -uri: /comments/{comment_id}
+ GET
  
  
