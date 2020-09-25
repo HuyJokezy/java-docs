@@ -1,0 +1,10 @@
+1.2.
+- API gửi tin nhắn với người đã từng nhắn tin với trang
+- API gửi tin nhắn qua cmt với người chưa từng nhắn tin với trang
+- API gửi bình luận với người đã bình luận vào post
+- API gửi bình luận mới vào post
+
+------------------------------
+1. Gửi tin nhắn với người đã từng nhắn tin tới trang
+- POST
+- uri: /messages
