@@ -1,0 +1,42 @@
+App chat và MXH
+- Người dùng chat (đến từ FB, Instagram)
+- Trang Facebook
+- Trang Instagram
+- Group Facebook
+- Bài đăng Facebook
+- Bài đăng Instagram
+- Người dùng chat đến trang Facebook, Instagram tạo thành 1 hội thoại
+- Người dùng comment vào 1 bài đăng tạo thành 1 hội thoại
+Hội thoại hiển thị trên cùng 1 giao diện
+Có các API:
+- Danh sách trang / 1 trang
+- Danh sách hội thoại / 1 hội thoại
+- Danh sách người dùng / 1 người dùng
+- Danh sách bài đăng / 1 bài đăng
+- Danh sách tin nhắn / 1 tin nhắn
+- Danh sách bình luận / 1 bình luận
+Các API đề xuất các bộ lọc có thể trình bày theo (sử dụng cho use case nào, cách triển khai)
+
+-------------------
+1. Danh sách trang:
+- uri: /pages?facebook_user_id=123&alias=lygt
+- method: GET
+- response: list object
+
+2. Một trang
+- uri: /pages/{facebook_page_id}
+- method: GET
+- response: {}
+
+3. Danh sách hội thoại
+- uri: 
+  + trường hợp nhiều page: /conversations?facebook_page_id=1,2,3,4&alias=lygt&sort=newest&page=1&number=100
+  + trường hợp 1 page:
+    /pages/{id}/conversations?alias=lygt&sort=newest&page=1&number=100
+    /conversations?facebook_page_id=1&alias=lygt&sort=newest&page=1&number=100
+ - method: GET
+ 
+ 4. Một hội thoại
+ - uri: /conversations/{id}
+ 
+ 
