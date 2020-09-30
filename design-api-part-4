@@ -1,4 +1,7 @@
 1.4
 - API update link ảnh hết hạn của 1 tin nhắn
 
----------------
+---------------lấy lại thông tin message trên fb
+- method: GET
+- uri: pages/{fb_page_id}/messages/{fb_message_id}
+-> xli: lấy thông tin về kênh và update lại tin vào db
