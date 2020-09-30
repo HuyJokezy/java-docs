@@ -5,7 +5,8 @@ Design API xác thực bằng username + password + thông tin user
   + "site":"",
   + "username":"",
   + "password":"",
-=> CHưa rõ yêu cầu
+=> CHưa rõ yêu cầu : 
+- pass sẽ đc mã hóa
 - uri: /auth
 - headers: 
   + x-bizweb-app-fpage-token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJseWd0Mi10ZXN0IiwiYWNjb3VudElkIjoiNWQ3NzUwNGExYTg2M2MwMDAxMzZkZWE4IiwiZmJQYWdlSWRzIjoiWzMwMzY5NTk4MDMxNzM2MSwgNjQzMjY3Nzg2MDkwODMxLCAxMDI3MjMzNTExMzAzNjksIDEwNzMyNDk2MDgzNTAzMCwgMTc1MzQ4Mzk5Nzg1MDMzXSIsImlhdCI6MTYwMTQ4ODcxNiwiZXhwIjoxNjAyMDkzNTE2fQ.Lkz6zJT1FlJDGGjCzd-F6jgwmY1CznW4fyp11QA4oH
