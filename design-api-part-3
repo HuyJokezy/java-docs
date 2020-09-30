@@ -1,0 +1,5 @@
+1.3.
+- API sửa nội dung bình luận
+- API ẩn tất cả bình luận của 1 bài viết
+- API kết nối page vào 1 site Sapo
+- API gỡ kết nối page đang kết nối với 1 site Sapo
