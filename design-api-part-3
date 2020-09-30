@@ -19,9 +19,24 @@
 3. Kết nối page vào 1 site Sapo
 a. Kết nối 1 page
 - PUT
-- uri: /pages/{fb_page_id}/connect
+- uri: 
+  + /pages/{fb_page_id}/connect
+  + /pages/connect
 - body: 
   + alias
   + fb_user_id
-
+b. Kết nối nhiều page*
+- PUT
+- uri: /pages/connect
+- body: 
+  + fb_page_ids: list id
+  + alias
+  + fb_user_id
 4. Gỡ kết nối page đang kết nối với 1 site Sapo
+- DELETE
+- uri: /pages/connect
+- body:
+  + fb_page_ids: list id
+  + alias
+  + fb_user_id
+
