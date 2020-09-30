@@ -2,6 +2,38 @@ POST: tạo mới
 PUT: update thông tin 1 khách, đơn
 PATCH: update 1 phần, chỉ gửi các thuộc tính cần thay đổi
 -> có thể dùng post để update đc
+-> theo chuẩn rest để quy chuẩn, còn thực tế thì...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - post: k có quyền kiểm soát cách lưu
 - gửi 1 loạt resources  trong 1 lệnh gọi -> chưa nhận dạng đc, chưa có ID định danh
 ->
