@@ -3,3 +3,25 @@
 - API ẩn tất cả bình luận của 1 bài viết
 - API kết nối page vào 1 site Sapo
 - API gỡ kết nối page đang kết nối với 1 site Sapo
+
+--------------------------
+1. Sửa nội dung bình luận
+- PATCH
+- uri: /comments/{comment_id}
+- body: 
+  + content: ''
+  + staff_id: 123
+2. Ẩn tất cả bình luận của 1 bài viết
+- PATCH
+- uri: /feeds/123/comments
+- body: 
+  + is_hidden: true
+3. Kết nối page vào 1 site Sapo
+a. Kết nối 1 page
+- PUT
+- uri: /pages/{fb_page_id}/connect
+- body: 
+  + alias
+  + fb_user_id
+
+4. Gỡ kết nối page đang kết nối với 1 site Sapo
