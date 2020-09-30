@@ -1,0 +1,7 @@
+Design API xác thực bằng username + password + thông tin user
+- POST
+- uri: /login
+- body:
+  + "site":"",
+  + "username":"",
+  + "password":"",
