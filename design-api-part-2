@@ -6,32 +6,52 @@
 
 ------------------------------
 1. Gửi tin nhắn với người đã từng nhắn tin tới trang
-- docs fb: https://developers.facebook.com/docs/messenger-platform/reference/send-api
 - Các dạng tin nhắn: 
   + text, Audio, Images, Video, Files
   + template button: sản phẩm
 - POST
-- uri: /conversations/123/messages
+- uri: 
+  + /conversations/123/messages
+  + /messages
 - body: 
-  + alias: "lygt2-test"
+  + conversation_id: 123
   + facebook_page_id: "643267786090831"
   + facebook_user_id: "2294818810789127"
-  + id_fake: "21d9332c-bd15-4550-a9c9-8d8f9da075eb"
-  + last_user_reply: "Giáp Lý"
-  + facebook_sender_id: (staff_id)
-  + message: "34"
-2. Gửi tin nhắn qua cmt với người chưa từng nhắn tin với trang
-- https://developers.facebook.com/docs/messenger-platform/discovery/private-replies
+  + id_fake: "21d9332c-bd15-4550-a9c9-8d8f9da075eb" (khi tạo 1 tin nhắn sẽ có status publishing)
+  + facebook_staff_id: (staff_id - thay vì name staff)
+  
+  + content: "34" (nội dung tin nhắn)
+  + photos:list link ảnh
+  + type: text (text, image)
+  + status: publishing
+  
+2. Gửi tin nhắn qua cmt với người chưa từng nhắn tin với trang (có phải qua luồng private reply?)
 - POST
 - uri: /messages
 - body: 
-  ...(body phần 1)
-  + comment_id
-3. Gửi bình luận với người đã bình luận vào post
+  + ...body phần 1
+  + comment_id: id của comment đc phản hồi
+3. Gửi bình luận với người đã bình luận vào post(ảnh, text)
 - POST
-- uri: /conversations/123/comments
+- uri: 
+  + /conversations/123/comments
+  + /comments
 - body: 
-  ...(body phần 1)
-
-  + comment_id
-4. Gửi bình luận mới vào post
+  + ...body phần 1
+  + facebook_comment_id: biết đc comment phản hồi cho comment nào
+  
+4. Gửi bình luận mới vào post (note: chưa nhớ ở phần nào)
+- POST
+- uri: 
+  + /comments
+- body
+  + facebook_comment_id: biết đc comment phản hồi cho comment nào
+  + facebook_page_id: "643267786090831"
+  + facebook_user_id: "2294818810789127"
+  + id_fake: "21d9332c-bd15-4550-a9c9-8d8f9da075eb" (khi tạo 1 tin nhắn sẽ có status publishing)
+  + facebook_staff_id: (staff_id - thay vì name staff)
+  
+  + content: "34" (nội dung tin nhắn)
+  + photos:list link ảnh
+  + type: text (text, image)
+  + status: publishing
