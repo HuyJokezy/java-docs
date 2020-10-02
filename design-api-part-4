@@ -5,3 +5,8 @@
 - method: GET
 - uri: pages/{fb_page_id}/messages/{fb_message_id}
 -> xli: lấy thông tin về kênh và update lại tin vào db
+--------------------
+CHữa bài:
+- method k tính xli bên fb mà bên mk sẽ update lại thông tin tin nhắn nên 
+- method: PATCH
+- uri: /messages/{fb_message_id}/images
