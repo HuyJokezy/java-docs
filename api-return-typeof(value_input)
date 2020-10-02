@@ -1,3 +1,24 @@
 Code 1 API có thể trả về nhiều kiểu object dữ liệu khác nhau tùy theo input
 
-- 
+- uri: /test_api
+- method GET
+- ví dụ viết api trả ra thông tin top nhân viên theo : top doanh thu, top đơn hàng, top
+------------
+public Map testApiController(@Valid FilterTopStaff filter) {
+    switch (filter.getType()) {
+            case "revenue":
+                List<TopByRevenue> topByRevenue = getTopByRevenue(filter);
+                return Map.of("by_revenue", topByRevenue);
+            case "new_order":
+                List<TopByOrder> topByOrder = getTopByOrder(filter);
+                return Map.of("by_order", topByOrder);
+            case "conversion_rate":
+                 List<TopByConversionRate> topByConversionRate =  getTopByConversionRate(filter);
+                 return Map.of("by_conversion_rate", topByConversionRate);
+            case "response_time":
+                 List<TopByResponseTime> topByResponseTime =  getTopByResponseTime(filter);
+                 return Map.of("by_response_time", topByResponseTime);
+            default:
+                return Map.of("top_staff", new);
+        }
+}
